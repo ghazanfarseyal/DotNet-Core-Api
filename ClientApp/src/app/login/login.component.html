@@ -1,0 +1,44 @@
+<mat-toolbar class="mat-elevation-z6" color="primary">
+  <h1>:: Assignment</h1>
+</mat-toolbar>
+<div class="flex-container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Sign In</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input
+              type="text"
+              matInput
+              matInputAutofocus
+              formControlName="username"
+              placeholder="Enter your username"
+            />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-label>Password</mat-label>
+            <input
+              type="password"
+              matInput
+              formControlName="password"
+              placeholder="Enter your password"
+            />
+          </mat-form-field>
+        </p>
+
+        <div align="end">
+          <button type="submit" mat-raised-button color="primary">
+            Sign In
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

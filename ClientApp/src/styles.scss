@@ -1,0 +1,119 @@
+@import "~@swimlane/ngx-datatable/themes/material.scss";
+@import "~@swimlane/ngx-datatable/themes/dark.scss";
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container {
+  margin: 10px;
+}
+
+.small {
+  font-size: 10px;
+}
+
+.red {
+  color: #dc143c;
+}
+
+.green {
+  color: #32cd32;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  margin: 8px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+ngx-datatable {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+
+  .datatable-header {
+    .datatable-header-cell {
+      color: #393739 !important;
+      text-transform: uppercase;
+      border: solid 1px #fff;
+      font-size: 11px !important;
+      padding: 5px !important;
+      background: #f1f2f6;
+      font-weight: 600;
+    }
+  }
+  .datatable-body {
+    .datatable-body-row {
+      .datatable-body-cell {
+        padding: 5px !important;
+        font-size: 11px !important;
+        border-bottom: solid 1px rgb(190, 190, 190);
+        overflow-y: visible !important;
+        overflow-x: visible !important;
+      }
+    }
+  }
+
+  .datatable-row-even {
+    background: #fff;
+  }
+
+  .datatable-row-odd {
+    background: #efefef;
+  }
+
+  // Style footer appearance
+  .datatable-footer {
+    background: #f1f2f6;
+    padding: 0px;
+    border-top: solid 1px #dddee6;
+    font-size: 11px;
+    font-weight: 400;
+    color: #4a4a4b;
+    .pager {
+      li {
+        padding: 0 1em !important;
+
+        a {
+          color: rgba(68, 68, 68, 1);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // Style rules for the footer pagination elements
+  .datatable-icon-done-all:before {
+    content: ">>";
+  }
+
+  .datatable-icon-left:before {
+    content: "<";
+  }
+
+  .datatable-icon-right:before {
+    content: ">";
+  }
+
+  .datatable-icon-skip:before {
+    content: ">>";
+  }
+
+  .datatable-icon-prev:before {
+    content: "<<";
+  }
+  & .dropdown-menu {
+    z-index: 1000 !important;
+  }
+}

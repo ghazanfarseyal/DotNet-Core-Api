@@ -1,0 +1,97 @@
+<ng-container *ngIf="!encryptedData">
+  <form
+    [formGroup]="transactionForm"
+    (ngSubmit)="onSubmit(transactionForm)"
+    novalidate
+  >
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Processing Code</mat-label>
+          <input
+            type="text"
+            matInput
+            matInputAutofocus
+            formControlName="processingCode"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>System Tracker Number</mat-label>
+          <input
+            type="text"
+            matInput
+            matInputAutofocus
+            formControlName="systemTraceNr"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Function Code</mat-label>
+          <input
+            type="text"
+            matInput
+            matInputAutofocus
+            formControlName="functionCode"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Card Number</mat-label>
+          <input
+            type="text"
+            matInput
+            matInputAutofocus
+            formControlName="cardNo"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Card Holder</mat-label>
+          <input
+            type="text"
+            matInput
+            matInputAutofocus
+            formControlName="cardHolder"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Amount Transaction</mat-label>
+          <input
+            type="text"
+            matInput
+            matInputAutofocus
+            formControlName="amountTrxn"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Currency Code</mat-label>
+          <input
+            type="text"
+            matInput
+            matInputAutofocus
+            formControlName="currencyCode"
+          />
+        </mat-form-field>
+
+        <div align="end">
+          <button type="submit" mat-raised-button color="primary">
+            Submit
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</ng-container>
+
+<ng-container *ngIf="encryptedData">
+  <pre>
+    {{ encryptedData | json }}
+  </pre>
+  <br />
+  <pre>
+    {{ response | json }}
+  </pre>
+</ng-container>
